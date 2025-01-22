@@ -53,6 +53,7 @@ La API de ToDo es una aplicación web RESTful desarrollada con .NET 8, siguiendo
 ```bash
 git clone <url-del-repositorio>
 cd <carpeta-del-repositorio>
+```
 
 ## Configurar Variables de Entorno
 
@@ -69,6 +70,7 @@ Crea un archivo `appsettings.json` o utiliza el existente. Configura las opcione
     "DefaultConnection": "Server=localhost;Database=ToDoDb;User Id=sa;Password=YourPassword123;"
   }
 }
+```
 ## Instrucciones de Docker
 
 ### Dockerfile
@@ -98,7 +100,7 @@ El archivo `docker-compose.yml` configura dos servicios:
 
 ```bash
 docker-compose up -d --build
-
+```
 ## Servicios
 
 ### API
@@ -115,7 +117,7 @@ Para detener y eliminar los contenedores, usa el siguiente comando:
 
 ```bash
 docker-compose down
-
+```
 ## Ejecutar Localmente
 
 ### Restaurar Dependencias
@@ -124,21 +126,21 @@ Ejecuta el siguiente comando para restaurar las dependencias del proyecto:
 
 ```bash
 dotnet restore
-
+```
 ### Aplicar Migraciones
 
 Aplica las migraciones de la base de datos con el siguiente comando:
 
 ```bash
 dotnet ef database update --project ToDo.Infrastructure --startup-project ToDo.API
-
+```
 ## Ejecutar la Aplicación
 
 Ejecuta el proyecto localmente con el siguiente comando:
 
 ```bash
 dotnet run --project ToDo.API
-
+```
 ## Acceder a la API
 
 - **Documentación Swagger**: [http://localhost:5000/swagger/index.html](http://localhost:5000/swagger/index.html)
@@ -151,6 +153,8 @@ El proyecto incluye pruebas unitarias para controladores y servicios. Usa el sig
 
 ```bash
 dotnet test
+```
+
 ## Endpoints de la API
 
 ### Autenticación
@@ -166,6 +170,7 @@ dotnet test
   "username": "admin",
   "password": "password"
 }
+```
 
 ### Gestión de Tareas
 
