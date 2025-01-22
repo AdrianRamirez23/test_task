@@ -51,8 +51,7 @@ La API de ToDo es una aplicación web RESTful desarrollada con .NET 8, siguiendo
 ### Clonar el Repositorio
 
 ```bash
-git clone <url-del-repositorio>
-cd <carpeta-del-repositorio>
+git clone https://github.com/AdrianRamirez23/test_task.git
 ```
 
 ## Configurar Variables de Entorno
@@ -61,14 +60,13 @@ Crea un archivo `appsettings.json` o utiliza el existente. Configura las opcione
 
 ```json
 {
-  "JwtSettings": {
-    "Issuer": "TaskToDoAPI",
-    "Audience": "TaskToDoUsers",
-    "SecretKey": "YourSuperSecretKey1234567890"
-  },
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=ToDoDb;User Id=sa;Password=YourPassword123;"
-  }
+   "DefaultConnection": "Server=localhost,1433;Database=TodoDb;User=sa;Password=YourPassword123;TrustServerCertificate=True;"
+ },
+ "JwtSettings": {
+   "Issuer": "YourIssuer",
+   "Audience": "YourAudience",
+   "SecretKey": "SuperSecureKeyForTaskToDoAPI123456!"
 }
 ```
 ## Instrucciones de Docker
